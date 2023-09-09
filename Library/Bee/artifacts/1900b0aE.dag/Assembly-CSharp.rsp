@@ -356,6 +356,7 @@
 "Assets/Scripts/ChangeVideo.cs"
 "Assets/Scripts/GoToGame.cs"
 "Assets/Scripts/GoToTutorial.cs"
+"Assets/Scripts/ShowButtonOnVideoEnd.cs"
 -langversion:9.0
 
 /deterministic
