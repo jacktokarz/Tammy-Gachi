@@ -205,9 +205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1791339020}
-        m_TargetAssemblyTypeName: ChangeVideo, Assembly-CSharp
-        m_MethodName: changeVideo
+      - m_Target: {fileID: 929008081}
+        m_TargetAssemblyTypeName: VideoDecider, Assembly-CSharp
+        m_MethodName: EatClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -490,6 +490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 929008080}
+  - component: {fileID: 929008081}
   m_Layer: 0
   m_Name: ValueHolder
   m_TagString: Untagged
@@ -512,6 +513,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929008081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929008079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef2b028a5c05ef41906ae09bb07dedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vp: {fileID: 1766071158}
+  narratorBox: {fileID: 0}
+  narratorVp: {fileID: 0}
+  eatsClicked: 0
+  drinksClicked: 0
+  sleepsClicked: 0
+  exercisesClicked: 0
+  artsClicked: 0
+  mirrorsClicked: 0
+  eatButton: {fileID: 123050365}
+  drinkButton: {fileID: 2003441313}
+  sleepButton: {fileID: 498530088}
+  exerciseButton: {fileID: 1601927021}
+  artButton: {fileID: 1724750288}
+  mirrorButton: {fileID: 1369791502}
+  escapeButton: {fileID: 0}
+  pillsAccept: {fileID: 0}
+  pillsReject: {fileID: 0}
+  happyIdle: {fileID: 32900000, guid: 776150090a51bc047b524edf7dfd318c, type: 3}
+  sadIdle: {fileID: 0}
+  existentialIdle: {fileID: 0}
+  eatOne: {fileID: 0}
+  eatTwo: {fileID: 0}
+  eatThree: {fileID: 0}
+  drinkOne: {fileID: 32900000, guid: 453c6918d00b04f45a90e79ffd8edb91, type: 3}
+  drinkTwo: {fileID: 32900000, guid: 189fcf0e5b9245e4bba903271d7f84c3, type: 3}
+  drinkThree: {fileID: 32900000, guid: 40d6ad49b5915234ab73c51324f6151b, type: 3}
+  sleepOne: {fileID: 0}
+  sleepTwo: {fileID: 0}
+  sleepThree: {fileID: 0}
+  chokeDeath: {fileID: 0}
+  exerciseOne: {fileID: 32900000, guid: 189fcf0e5b9245e4bba903271d7f84c3, type: 3}
+  exerciseTwo: {fileID: 0}
+  exerciseThree: {fileID: 0}
+  artOne: {fileID: 0}
+  artTwo: {fileID: 0}
+  artThree: {fileID: 0}
+  mirrorOne: {fileID: 0}
+  mirrorTwo: {fileID: 0}
+  alcohol: {fileID: 0}
+  escape: {fileID: 0}
+  pillsReveal: {fileID: 0}
+  pillsCloseup: {fileID: 0}
+  pillsRefusaal: {fileID: 0}
+  pillsAcceptance: {fileID: 0}
+  trueEnding: {fileID: 0}
+  deathNarrator: {fileID: 0}
+  totalStars: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +666,138 @@ Transform:
   - {fileID: 1898981698}
   m_Father: {fileID: 1791339024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1369791502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369791506}
+  - component: {fileID: 1369791505}
+  - component: {fileID: 1369791504}
+  - component: {fileID: 1369791503}
+  m_Layer: 5
+  m_Name: Mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369791503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369791502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1369791504}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1791339020}
+        m_TargetAssemblyTypeName: ChangeVideo, Assembly-CSharp
+        m_MethodName: changeVideo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1369791504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369791502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4d517b99d1fb6754b8a820d3a51532ba, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1369791505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369791502}
+  m_CullTransparentMesh: 1
+--- !u!224 &1369791506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369791502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.05, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1791339024}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 275.4, y: -123.6}
+  m_SizeDelta: {x: 90, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1601927021
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,9 +1087,9 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766071157}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8dffd8d5ddfde6f4c936661c0a87e9a1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 776150090a51bc047b524edf7dfd318c, type: 3}
   m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
+  m_TargetCamera3DLayout: 2
   m_TargetCamera: {fileID: 963194227}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
@@ -904,9 +1097,9 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 1
   m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
+  m_DataSource: 0
+  m_TimeUpdateMode: 1
+  m_PlaybackSpeed: 0.4
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -931,11 +1124,11 @@ Transform:
   m_GameObject: {fileID: 1766071157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.629303, y: 2.9499054, z: -1.0345306}
+  m_LocalPosition: {x: -437.4293, y: -186.8501, z: -1.0345306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1791339024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791339019
 GameObject:
@@ -1045,11 +1238,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1766071159}
   - {fileID: 123050366}
   - {fileID: 2003441314}
   - {fileID: 498530089}
   - {fileID: 1601927022}
   - {fileID: 1724750289}
+  - {fileID: 1369791506}
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1313,9 +1508,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1791339020}
-        m_TargetAssemblyTypeName: ChangeVideo, Assembly-CSharp
-        m_MethodName: changeVideo
+      - m_Target: {fileID: 929008081}
+        m_TargetAssemblyTypeName: VideoDecider, Assembly-CSharp
+        m_MethodName: DrinkClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1425,7 +1620,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-  - {fileID: 1766071159}
   - {fileID: 1791339024}
   - {fileID: 1987731949}
   - {fileID: 5584089589838689143}
