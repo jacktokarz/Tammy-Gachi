@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class VideoDecider : MonoBehaviour
 {
     // Constants
-    float moveSpeed = 2;
+    float moveSpeed = 1.8f;
     Vector3 narratorInsideSpot = new Vector3(-0.4f, 0, 0.9f);
     Vector3 narratorOutsideSpot = new Vector3(-1.3f, 0, 0.9f);
 
@@ -128,7 +128,7 @@ public class VideoDecider : MonoBehaviour
 
         if (narratorSlidingOut)
         {
-            narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorOutsideSpot, moveSpeed * 1.3f * Time.deltaTime);
+            narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorOutsideSpot, moveSpeed * 1.1f * Time.deltaTime);
             if (narratorBox.transform.position.x - narratorOutsideSpot.x <= 0.02f)
             {
                 narratorSlidingOut = false;
