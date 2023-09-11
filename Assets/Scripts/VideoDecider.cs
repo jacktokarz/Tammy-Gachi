@@ -69,7 +69,6 @@ public class VideoDecider : MonoBehaviour
     public VideoClip escapeNarrator;
     public VideoClip complacentNarrator;
     public VideoClip insanityNarrator;
-    public VideoClip trueEndingNarrator;
 
     public GameObject starsHolder;
     public Image star1;
@@ -475,7 +474,7 @@ public class VideoDecider : MonoBehaviour
     public void TrueEndingClick()
     {
         delegateMethod.RemoveAllListeners();
-        PlayVideo(trueEndingNarrator);
+        PlayVideo(trueEnding);
     }
 
     void IncrementStars()
@@ -497,6 +496,7 @@ public class VideoDecider : MonoBehaviour
         else if(totalStars == 5)
         {
             starToChange = star5;
+            trueEndingButton.SetActive(true);
         }
         starToChange.sprite = goldStar;
     }

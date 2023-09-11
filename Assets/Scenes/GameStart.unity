@@ -1112,23 +1112,23 @@ MonoBehaviour:
   sleepThree: {fileID: 32900000, guid: 6c4c405a376aac74ba87aaf6cd545b81, type: 3}
   chokeDeath: {fileID: 32900000, guid: 2a55189409c4c31448603fa06ec9dc6b, type: 3}
   exerciseOne: {fileID: 32900000, guid: 189fcf0e5b9245e4bba903271d7f84c3, type: 3}
-  exerciseTwo: {fileID: 0}
-  artOne: {fileID: 0}
-  artTwo: {fileID: 0}
-  artThree: {fileID: 0}
-  mirrorOne: {fileID: 0}
-  mirrorTwo: {fileID: 0}
+  exerciseTwo: {fileID: 32900000, guid: 99a9ec581ee22274bb7c743725087c78, type: 3}
+  artOne: {fileID: 32900000, guid: b20e0965be2002e46af985cf45187f3a, type: 3}
+  artTwo: {fileID: 32900000, guid: 1c33842619b60c7489030d6143e91615, type: 3}
+  artThree: {fileID: 32900000, guid: 8da352d3d0fa73d46aa2f346d8e50d38, type: 3}
+  mirrorOne: {fileID: 32900000, guid: 7cd8b131236ee0548af9e61e14018255, type: 3}
+  mirrorTwo: {fileID: 32900000, guid: f8d8cee82a03d4145b35c5a822d04c81, type: 3}
   alcohol: {fileID: 0}
-  escape: {fileID: 0}
-  pillsReveal: {fileID: 0}
-  pillsCloseup: {fileID: 0}
-  pillsRefusal: {fileID: 0}
-  pillsAcceptance: {fileID: 0}
-  trueEnding: {fileID: 0}
-  deathNarrator: {fileID: 0}
-  escapeNarrator: {fileID: 0}
-  complacentNarrator: {fileID: 0}
-  insanityNarrator: {fileID: 0}
+  escape: {fileID: 32900000, guid: b8705c2b8eafc1949879b9ea713f0e74, type: 3}
+  pillsReveal: {fileID: 32900000, guid: b73e4985446d9fb40b3b7774d79c8a8e, type: 3}
+  pillsCloseup: {fileID: 32900000, guid: f9228cc9ef0f8c84cbb7bb143dd602e0, type: 3}
+  pillsRefusal: {fileID: 32900000, guid: 412ff5808aecbef48ba2a1832aa5151c, type: 3}
+  pillsAcceptance: {fileID: 32900000, guid: 05b4c91d25a5f314d9bf827eac71588b, type: 3}
+  trueEnding: {fileID: 32900000, guid: 063cea6944237504ea43f4cccfec7082, type: 3}
+  deathNarrator: {fileID: 32900000, guid: 924dca613f80ef5459589dce2dd9057d, type: 3}
+  escapeNarrator: {fileID: 32900000, guid: 8f7f38dd01e0bca4f83c7eacfafe46f4, type: 3}
+  complacentNarrator: {fileID: 32900000, guid: 375c650c82c52a240a39b4ac8104cc8a, type: 3}
+  insanityNarrator: {fileID: 32900000, guid: 0a4b003717e691d4a8a8ee1f572ff211, type: 3}
   trueEndingNarrator: {fileID: 0}
   starsHolder: {fileID: 390573390}
   star1: {fileID: 2097397824}
