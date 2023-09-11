@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.Events;
 
@@ -8,20 +9,15 @@ public class VideoDecider : MonoBehaviour
 {
     // Constants
     float moveSpeed = 2;
-    Vector3 narratorInsideSpot = new Vector3(10.5f, 0, 0);
-    Vector3 narratorOutsideSpot = new Vector3(-10.5f, 0, 0);
+    Vector3 narratorInsideSpot = new Vector3(-0.4f, 0, 0.9f);
+    Vector3 narratorOutsideSpot = new Vector3(-1.3f, 0, 0.9f);
+
+
     //Publicly Set
     public VideoPlayer vp;
 
     public GameObject narratorBox;
     public VideoPlayer narratorVp;
-
-    public int eatsClicked;
-    public int drinksClicked;
-    public int sleepsClicked;
-    public int exercisesClicked;
-    public int artsClicked;
-    public int mirrorsClicked;
 
     public GameObject eatButton;
     public GameObject drinkButton;
@@ -30,8 +26,10 @@ public class VideoDecider : MonoBehaviour
     public GameObject artButton;
     public GameObject mirrorButton;
     public GameObject escapeButton;
+    public GameObject pillsButton;
     public GameObject pillsAccept;
     public GameObject pillsReject;
+    public GameObject trueEndingButton;
 
     public VideoClip happyIdle;
     public VideoClip sadIdle;
@@ -51,7 +49,6 @@ public class VideoDecider : MonoBehaviour
     
     public VideoClip exerciseOne;
     public VideoClip exerciseTwo;
-    public VideoClip exerciseThree;
     public VideoClip artOne;
     public VideoClip artTwo;
     public VideoClip artThree;
@@ -63,20 +60,36 @@ public class VideoDecider : MonoBehaviour
 
     public VideoClip pillsReveal;
     public VideoClip pillsCloseup;
-    public VideoClip pillsRefusaal;
+    public VideoClip pillsRefusal;
     public VideoClip pillsAcceptance;
 
     public VideoClip trueEnding;
 
     public VideoClip deathNarrator;
+    public VideoClip escapeNarrator;
+    public VideoClip complacentNarrator;
+    public VideoClip insanityNarrator;
+    public VideoClip trueEndingNarrator;
 
-    public int totalStars;
-    public ArrayList endingsSeen;
+    public GameObject starsHolder;
+    public Image star1;
+    public Image star2;
+    public Image star3;
+    public Image star4;
+    public Image star5;
+    public Sprite goldStar;
 
 
     // Internally Used
     UnityEvent delegateMethod;
-
+    int totalStars;
+    ArrayList endingsSeen;
+    int eatsClicked;
+    int drinksClicked;
+    int sleepsClicked;
+    int exercisesClicked;
+    int artsClicked;
+    int mirrorsClicked;
     bool narratorSlidingIn = false;
     bool narratorSlidingOut = false;
 
@@ -84,15 +97,19 @@ public class VideoDecider : MonoBehaviour
     void Start()
     {
         DisableButtons();
+        narratorBox.transform.position = narratorOutsideSpot;
         delegateMethod = new UnityEvent();
         endingsSeen = new ArrayList();
+        trueEndingButton.SetActive(false);
+        pillsAccept.SetActive(false);
+        pillsReject.SetActive(false);
         eatsClicked = 0;
         drinksClicked = 0;
         sleepsClicked = 0;
         exercisesClicked = 0;
         artsClicked = 0;
         mirrorsClicked = 0;
-        EnableButtons();
+        PlayIdle();
     }
 
     // Update is called once per frame
@@ -101,8 +118,9 @@ public class VideoDecider : MonoBehaviour
         if (narratorSlidingIn)
         {
             narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorInsideSpot, moveSpeed * Time.deltaTime);
-            if (narratorBox.transform.position.x - narratorInsideSpot.x <= 0.2)
+            if (Mathf.Abs(narratorBox.transform.position.x - narratorInsideSpot.x) <= 0.02f)
             {
+                Debug.Log("no more sliding");
                 narratorSlidingIn = false;
                 narratorVp.Play();
                 narratorVp.loopPointReached += NarratorReset;
@@ -112,7 +130,7 @@ public class VideoDecider : MonoBehaviour
         if (narratorSlidingOut)
         {
             narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorOutsideSpot, moveSpeed * 1.3f * Time.deltaTime);
-            if (narratorBox.transform.position.x - narratorOutsideSpot.x <= 0.2)
+            if (narratorBox.transform.position.x - narratorOutsideSpot.x <= 0.02f)
             {
                 narratorSlidingOut = false;
                 PlayIdle();
@@ -122,6 +140,7 @@ public class VideoDecider : MonoBehaviour
 
     void PlayVideo(VideoClip newClip)
     {
+        Debug.Log("playing vid");
         DisableButtons();
         vp.isLooping = false;
         vp.clip = newClip;
@@ -131,6 +150,7 @@ public class VideoDecider : MonoBehaviour
 
     void InvokeDelegateMethod(UnityEngine.Video.VideoPlayer vp)
     {
+        Debug.Log("invoking");
         delegateMethod.Invoke();
     }
 
@@ -147,36 +167,59 @@ public class VideoDecider : MonoBehaviour
             idleClip = existentialIdle;
         }
         vp.clip = idleClip;
+        vp.loopPointReached -= InvokeDelegateMethod;
         vp.Play();
         vp.isLooping = true;
     }
 
     void DisableButtons()
     {
+        starsHolder.SetActive(false);
         eatButton.SetActive(false);
         drinkButton.SetActive(false);
         sleepButton.SetActive(false);
         exerciseButton.SetActive(false);
         artButton.SetActive(false);
         mirrorButton.SetActive(false);
+        escapeButton.SetActive(false);
+        pillsButton.SetActive(false);
     }
 
     void EnableButtons()
     {
+        starsHolder.SetActive(true);
         eatButton.SetActive(true);
         drinkButton.SetActive(true);
         sleepButton.SetActive(true);
-        if (eatsClicked + drinksClicked + sleepsClicked >= 2)
+        if ((eatsClicked + drinksClicked + sleepsClicked >= 2) || totalStars >= 2)
         {
             exerciseButton.SetActive(true);
             artButton.SetActive(true);
             mirrorButton.SetActive(true);
         }
+        if (exercisesClicked == 2)
+        {
+            exerciseButton.SetActive(false);
+            escapeButton.SetActive(true);
+        }
+        if (mirrorsClicked == 2)
+        {
+            mirrorButton.SetActive(false);
+        }
+        if (artsClicked == 3)
+        {
+            artButton.SetActive(false);
+        }
+        if (artsClicked >= 2 || mirrorsClicked >= 2)
+        {
+            pillsButton.SetActive(true);
+        }
     }
 
     public void EatClick()
     {
-        switch(eatsClicked)
+        delegateMethod.RemoveAllListeners();
+        switch (eatsClicked)
         {
             case 0:
                 eatsClicked += 1;
@@ -199,7 +242,7 @@ public class VideoDecider : MonoBehaviour
     {
         if (!endingsSeen.Contains("overeat"))
         {
-            totalStars += 1;
+            IncrementStars();
             endingsSeen.Add("overeat");
         }
         PlayNarrator(deathNarrator);
@@ -208,6 +251,7 @@ public class VideoDecider : MonoBehaviour
 
     public void DrinkClick()
     {
+        delegateMethod.RemoveAllListeners();
         if (artsClicked >= 2 || mirrorsClicked >= 2)
         {
             delegateMethod.AddListener(PlayIdle);
@@ -235,9 +279,10 @@ public class VideoDecider : MonoBehaviour
 
     void DrinkDeathReset()
     {
+        Debug.Log("reset drink");
         if (!endingsSeen.Contains("overdrink"))
         {
-            totalStars += 1;
+            IncrementStars();
             endingsSeen.Add("overdrink");
         }
         PlayNarrator(deathNarrator);
@@ -246,6 +291,13 @@ public class VideoDecider : MonoBehaviour
 
     public void SleepClick()
     {
+        delegateMethod.RemoveAllListeners();
+        if (eatsClicked > 1)
+        {
+            delegateMethod.AddListener(ChokeDeathReset);
+            PlayVideo(chokeDeath);
+            return;
+        }
         switch (sleepsClicked)
         {
             case 0:
@@ -265,15 +317,188 @@ public class VideoDecider : MonoBehaviour
         }
     }
 
+    void ChokeDeathReset()
+    {
+        if (!endingsSeen.Contains("chokeInSleep"))
+        {
+            IncrementStars();
+            endingsSeen.Add("chokeInSleep");
+        }
+        PlayNarrator(deathNarrator);
+        ResetClicks();
+    }
+
     void SleepDeathReset()
     {
         if (!endingsSeen.Contains("oversleep"))
         {
-            totalStars += 1;
+            IncrementStars();
             endingsSeen.Add("oversleep");
         }
-        PlayNarrator(deathNarrator);
+        PlayNarrator(insanityNarrator);
         ResetClicks();
+    }
+
+    public void ExerciseClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        switch (exercisesClicked)
+        {
+            case 0:
+                exercisesClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(exerciseOne);
+                break;
+            case 1:
+                exercisesClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(exerciseTwo);
+                break;
+        }
+    }
+
+    public void ArtClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        switch (artsClicked)
+        {
+            case 0:
+                artsClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(artOne);
+                break;
+            case 1:
+                artsClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(artTwo);
+                break;
+            case 2:
+                artsClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(artThree);
+                break;
+        }
+    }
+
+    public void MirrorClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        switch (mirrorsClicked)
+        {
+            case 0:
+                mirrorsClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(mirrorOne);
+                break;
+            case 1:
+                mirrorsClicked += 1;
+                delegateMethod.AddListener(PlayIdle);
+                PlayVideo(mirrorTwo);
+                break;
+        }
+    }
+
+    public void PillsClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        delegateMethod.AddListener(PillChoice);
+        PlayVideo(pillsReveal);
+    }
+
+    void PillChoice()
+    {
+        pillsAccept.SetActive(true);
+        pillsReject.SetActive(true);
+        vp.clip = pillsCloseup;
+        vp.isLooping = false;
+        vp.Play();
+    }
+
+    public void PillAcceptClick()
+    {
+        pillsAccept.SetActive(false);
+        pillsReject.SetActive(false);
+        delegateMethod.RemoveAllListeners();
+        delegateMethod.AddListener(PillAcceptDeath);
+        PlayVideo(pillsAcceptance);
+    }
+
+    void PillAcceptDeath()
+    {
+        if (!endingsSeen.Contains("pillAccept"))
+        {
+            IncrementStars();
+            endingsSeen.Add("pillAccept");
+        }
+        PlayNarrator(complacentNarrator);
+        ResetClicks();
+    }
+
+    public void PillRejectClick()
+    {
+        pillsAccept.SetActive(false);
+        pillsReject.SetActive(false);
+        delegateMethod.RemoveAllListeners();
+        delegateMethod.AddListener(PillRejectDeath);
+        PlayVideo(pillsRefusal);
+    }
+
+    void PillRejectDeath()
+    {
+        if(!endingsSeen.Contains("pillReject"))
+        {
+            IncrementStars();
+            endingsSeen.Add("pillReject");
+        }
+        PlayNarrator(insanityNarrator);
+        ResetClicks();
+    }
+
+    public void EscapeClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        delegateMethod.AddListener(EscapeDeath);
+        PlayVideo(escape);
+    }
+
+    void EscapeDeath()
+    {
+        if (!endingsSeen.Contains("escape"))
+        {
+            IncrementStars();
+            endingsSeen.Add("escape");
+        }
+        PlayNarrator(escapeNarrator);
+        ResetClicks();
+    }
+
+    public void TrueEndingClick()
+    {
+        delegateMethod.RemoveAllListeners();
+        PlayVideo(trueEndingNarrator);
+    }
+
+    void IncrementStars()
+    {
+        totalStars += 1;
+        Image starToChange = star1;
+        if(totalStars == 2)
+        {
+            starToChange = star2;
+        }
+        else if(totalStars == 3)
+        {
+            starToChange = star3;
+        }
+        else if(totalStars == 4)
+        {
+            starToChange = star4;
+        }
+        else if(totalStars == 5)
+        {
+            starToChange = star5;
+        }
+        starToChange.sprite = goldStar;
     }
 
     void ResetClicks()
@@ -288,8 +513,9 @@ public class VideoDecider : MonoBehaviour
 
     void PlayNarrator(VideoClip clipToPlay)
     {
+        Debug.Log("play narrator");
+        narratorSlidingIn = true;
         narratorVp.clip = clipToPlay;
-        PlayIdle();
     }
 
     void NarratorReset(UnityEngine.Video.VideoPlayer vp)
