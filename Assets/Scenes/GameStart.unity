@@ -1099,18 +1099,18 @@ MonoBehaviour:
   pillsReject: {fileID: 1190600901}
   trueEndingButton: {fileID: 716373630}
   happyIdle: {fileID: 32900000, guid: 776150090a51bc047b524edf7dfd318c, type: 3}
-  sadIdle: {fileID: 0}
-  existentialIdle: {fileID: 0}
-  eatOne: {fileID: 0}
-  eatTwo: {fileID: 0}
-  eatThree: {fileID: 0}
+  sadIdle: {fileID: 32900000, guid: 9a3d8d530406d894a9db72c4ab60762d, type: 3}
+  existentialIdle: {fileID: 32900000, guid: 8af94f29b38c10c409cb54d55af738d0, type: 3}
+  eatOne: {fileID: 32900000, guid: 4f8bdf2b62d3d224a9baa9bc41836841, type: 3}
+  eatTwo: {fileID: 32900000, guid: 1d08cae11d210bb4caf97903519a8698, type: 3}
+  eatThree: {fileID: 32900000, guid: 792c4dff5a3c9c74ebdfe8dd89da9b7c, type: 3}
   drinkOne: {fileID: 32900000, guid: 453c6918d00b04f45a90e79ffd8edb91, type: 3}
-  drinkTwo: {fileID: 0}
-  drinkThree: {fileID: 0}
-  sleepOne: {fileID: 0}
-  sleepTwo: {fileID: 0}
-  sleepThree: {fileID: 0}
-  chokeDeath: {fileID: 0}
+  drinkTwo: {fileID: 32900000, guid: cc7725868a257d04293867c2a6b091a5, type: 3}
+  drinkThree: {fileID: 32900000, guid: a6b34c031f1865d44963f6ac8e55ffa0, type: 3}
+  sleepOne: {fileID: 32900000, guid: d9b44dbc45c82f04cb4f9c210c662927, type: 3}
+  sleepTwo: {fileID: 32900000, guid: b173480ce35181342ab3f1bbe9752117, type: 3}
+  sleepThree: {fileID: 32900000, guid: 6c4c405a376aac74ba87aaf6cd545b81, type: 3}
+  chokeDeath: {fileID: 32900000, guid: 2a55189409c4c31448603fa06ec9dc6b, type: 3}
   exerciseOne: {fileID: 32900000, guid: 189fcf0e5b9245e4bba903271d7f84c3, type: 3}
   exerciseTwo: {fileID: 0}
   artOne: {fileID: 0}
@@ -2794,7 +2794,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 1
-  m_PlaybackSpeed: 0.4
+  m_PlaybackSpeed: 0.5
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
