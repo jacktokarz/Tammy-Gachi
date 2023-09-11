@@ -6,31 +6,10 @@ using UnityEngine.Video;
 public class ChangeVideo : MonoBehaviour
 {
     public VideoPlayer vp;
-    public VideoClip clipOne;
-    public VideoClip clipTwo;
 
-    // Start is called before the first frame update
-    void Start()
+    public void changeVideo(VideoClip newClip)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void changeVideo()
-    {
-        if(vp.clip == clipOne)
-        {
-            vp.clip = clipTwo;
-        }
-        else
-        {
-            vp.clip = clipOne;
-        }
+            vp.clip = newClip;
     }
 
 }
