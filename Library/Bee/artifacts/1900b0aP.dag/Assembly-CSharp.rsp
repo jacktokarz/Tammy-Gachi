@@ -298,7 +298,18 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
+-r:"Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.9.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.Animation.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.Common.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.IK.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.PixelPerfect.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.SpriteShape.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.Tilemap.Extras.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Burst.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Collections.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InternalAPIEngineBridge.001.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Core.ref.dll"
@@ -311,6 +322,9 @@
 "Assets/Scripts/ChangeVideo.cs"
 "Assets/Scripts/GoToGame.cs"
 "Assets/Scripts/GoToTutorial.cs"
+"Assets/Scripts/ShowButtonOnVideoEnd.cs"
+"Assets/Scripts/StretchToFit.cs"
+"Assets/Scripts/VideoDecider.cs"
 -langversion:9.0
 
 /deterministic

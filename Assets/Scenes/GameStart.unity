@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04760bc8b1e0edf43a805508ec7fd8f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f0495df79c27b3428cb4927fe998faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -226,7 +226,7 @@ RectTransform:
   m_GameObject: {fileID: 123050365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 358297060}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9056604, g: 0.8936988, b: 0.8936988, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b2edb29014f6bd4f973c55e5eeb8e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eead23bd5dc086244b10b4b19286e8ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -505,7 +505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &390573390
@@ -545,7 +545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 26}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &498530088
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 761422badfd026c43acd6bb100b82fc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a884d2602245c974a96f0d0e89cd6090, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d513577ac2197f94793f1bf2f0fd8f08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 170085525a667ff40854345990eb17a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1099,44 +1099,52 @@ MonoBehaviour:
   pillsReject: {fileID: 1190600901}
   trueEndingButton: {fileID: 716373630}
   happyIdle: {fileID: 32900000, guid: 776150090a51bc047b524edf7dfd318c, type: 3}
-  sadIdle: {fileID: 0}
-  existentialIdle: {fileID: 0}
-  eatOne: {fileID: 0}
-  eatTwo: {fileID: 0}
-  eatThree: {fileID: 0}
+  sadIdle: {fileID: 32900000, guid: 9a3d8d530406d894a9db72c4ab60762d, type: 3}
+  existentialIdle: {fileID: 32900000, guid: 8af94f29b38c10c409cb54d55af738d0, type: 3}
+  eatOne: {fileID: 32900000, guid: 4f8bdf2b62d3d224a9baa9bc41836841, type: 3}
+  eatTwo: {fileID: 32900000, guid: 1d08cae11d210bb4caf97903519a8698, type: 3}
+  eatThree: {fileID: 32900000, guid: 792c4dff5a3c9c74ebdfe8dd89da9b7c, type: 3}
   drinkOne: {fileID: 32900000, guid: 453c6918d00b04f45a90e79ffd8edb91, type: 3}
-  drinkTwo: {fileID: 0}
-  drinkThree: {fileID: 0}
-  sleepOne: {fileID: 0}
-  sleepTwo: {fileID: 0}
-  sleepThree: {fileID: 0}
-  chokeDeath: {fileID: 0}
+  drinkTwo: {fileID: 32900000, guid: cc7725868a257d04293867c2a6b091a5, type: 3}
+  drinkThree: {fileID: 32900000, guid: a6b34c031f1865d44963f6ac8e55ffa0, type: 3}
+  sleepOne: {fileID: 32900000, guid: d9b44dbc45c82f04cb4f9c210c662927, type: 3}
+  sleepTwo: {fileID: 32900000, guid: b173480ce35181342ab3f1bbe9752117, type: 3}
+  sleepThree: {fileID: 32900000, guid: 8619df7175598b140a50c5e202fd8de2, type: 3}
+  chokeDeath: {fileID: 32900000, guid: 2a55189409c4c31448603fa06ec9dc6b, type: 3}
   exerciseOne: {fileID: 32900000, guid: 189fcf0e5b9245e4bba903271d7f84c3, type: 3}
-  exerciseTwo: {fileID: 0}
-  artOne: {fileID: 0}
-  artTwo: {fileID: 0}
-  artThree: {fileID: 0}
-  mirrorOne: {fileID: 0}
-  mirrorTwo: {fileID: 0}
-  alcohol: {fileID: 0}
-  escape: {fileID: 0}
-  pillsReveal: {fileID: 0}
-  pillsCloseup: {fileID: 0}
-  pillsRefusal: {fileID: 0}
-  pillsAcceptance: {fileID: 0}
-  trueEnding: {fileID: 0}
-  deathNarrator: {fileID: 0}
-  escapeNarrator: {fileID: 0}
-  complacentNarrator: {fileID: 0}
-  insanityNarrator: {fileID: 0}
-  trueEndingNarrator: {fileID: 0}
+  exerciseTwo: {fileID: 32900000, guid: 99a9ec581ee22274bb7c743725087c78, type: 3}
+  artOne: {fileID: 32900000, guid: b20e0965be2002e46af985cf45187f3a, type: 3}
+  artTwo: {fileID: 32900000, guid: 1c33842619b60c7489030d6143e91615, type: 3}
+  artThree: {fileID: 32900000, guid: 8da352d3d0fa73d46aa2f346d8e50d38, type: 3}
+  mirrorOne: {fileID: 32900000, guid: 7cd8b131236ee0548af9e61e14018255, type: 3}
+  mirrorTwo: {fileID: 32900000, guid: f8d8cee82a03d4145b35c5a822d04c81, type: 3}
+  alcohol: {fileID: 32900000, guid: 98e0c11f8f8d68342b1f752d872c22ba, type: 3}
+  escape: {fileID: 32900000, guid: b8705c2b8eafc1949879b9ea713f0e74, type: 3}
+  pillsReveal: {fileID: 32900000, guid: b73e4985446d9fb40b3b7774d79c8a8e, type: 3}
+  pillsCloseup: {fileID: 32900000, guid: f9228cc9ef0f8c84cbb7bb143dd602e0, type: 3}
+  pillsRefusal: {fileID: 32900000, guid: 412ff5808aecbef48ba2a1832aa5151c, type: 3}
+  pillsAcceptance: {fileID: 32900000, guid: 05b4c91d25a5f314d9bf827eac71588b, type: 3}
+  trueEnding: {fileID: 32900000, guid: 063cea6944237504ea43f4cccfec7082, type: 3}
+  deathNarrator: {fileID: 32900000, guid: 924dca613f80ef5459589dce2dd9057d, type: 3}
+  escapeNarrator: {fileID: 32900000, guid: 8f7f38dd01e0bca4f83c7eacfafe46f4, type: 3}
+  complacentNarrator: {fileID: 32900000, guid: 375c650c82c52a240a39b4ac8104cc8a, type: 3}
+  insanityNarrator: {fileID: 32900000, guid: 0a4b003717e691d4a8a8ee1f572ff211, type: 3}
+  audio: {fileID: 1151562552}
   starsHolder: {fileID: 390573390}
   star1: {fileID: 2097397824}
   star2: {fileID: 1627426400}
   star3: {fileID: 1298574401}
   star4: {fileID: 106366281}
   star5: {fileID: 1923865655}
-  goldStar: {fileID: 21300000, guid: 31480d89ac3cf5347b62030e1b15b655, type: 3}
+  goldStar: {fileID: 21300000, guid: 295ccb856651d3d41b368ebf59ddba77, type: 3}
+  totalStars: 0
+  eatsClicked: 0
+  drinksClicked: 0
+  sleepsClicked: 0
+  exercisesClicked: 0
+  artsClicked: 2
+  mirrorsClicked: 1
+  increaseElapsed: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1238,134 @@ Transform:
   - {fileID: 1898981698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1151562551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151562553}
+  - component: {fileID: 1151562552}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1151562552
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151562551}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: da8b32b299731df4fb61347105c57fca, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1151562553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151562551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155121179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1426,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1344,7 +1480,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 922f89b1d0cafa942973d2a7b759a8aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab0973984ecf7f943a23957039fc9380, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1397,7 +1533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 14.26, y: -3.14, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -67, y: 56}
+  m_AnchoredPosition: {x: -67, y: 30}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190600903
@@ -1422,7 +1558,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1446,7 +1582,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 929008081}
         m_TargetAssemblyTypeName: VideoDecider, Assembly-CSharp
-        m_MethodName: PillsClick
+        m_MethodName: PillRejectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1503,7 +1639,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 1
-  m_PlaybackSpeed: 0.4
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -1579,8 +1715,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4, y: 0, z: 0.9}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1641,7 +1777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04760bc8b1e0edf43a805508ec7fd8f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f0495df79c27b3428cb4927fe998faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1700,7 +1836,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1754,7 +1890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4bbf975292b2694b8cef81133d20f2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fff01a2c046ec34eb2fa7f4112a1471, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1851,7 +1987,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1905,7 +2041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a76ae4534cc9b924cb1055c61bf7af29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecf255d70c48cf04abbbf1fe3b22c778, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1980,7 +2116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04760bc8b1e0edf43a805508ec7fd8f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f0495df79c27b3428cb4927fe998faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2058,7 +2194,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2112,7 +2248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d517b99d1fb6754b8a820d3a51532ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 649d4b49f14f94847afac899b73c1fb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2351,7 +2487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 14.26, y: -3.14, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -58, y: 56}
+  m_AnchoredPosition: {x: -58, y: 30}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884151937
@@ -2376,7 +2512,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2400,7 +2536,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 929008081}
         m_TargetAssemblyTypeName: VideoDecider, Assembly-CSharp
-        m_MethodName: PillsClick
+        m_MethodName: PillAcceptClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2580,7 +2716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04760bc8b1e0edf43a805508ec7fd8f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f0495df79c27b3428cb4927fe998faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2794,7 +2930,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 1
-  m_PlaybackSpeed: 0.4
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -2882,7 +3018,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.90588236, g: 0.89411765, b: 0.89411765, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2936,7 +3072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad4ae6898e2430741a67c5dbb1f99419, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65418c8ea7aab6241ac5cccf129e7ec4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3145,7 +3281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04760bc8b1e0edf43a805508ec7fd8f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f0495df79c27b3428cb4927fe998faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3229,6 +3365,7 @@ SceneRoots:
   - {fileID: 1791339024}
   - {fileID: 1987731949}
   - {fileID: 5584089589838689143}
-  - {fileID: 2000883796}
   - {fileID: 1265772659}
+  - {fileID: 2000883796}
   - {fileID: 929008080}
+  - {fileID: 1151562553}
