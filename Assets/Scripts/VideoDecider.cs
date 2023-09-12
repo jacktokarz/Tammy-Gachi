@@ -8,9 +8,13 @@ using UnityEngine.Events;
 public class VideoDecider : MonoBehaviour
 {
     // Constants
+    float normalMusicVolume = 0.36f;
+    float reducedMusicVolume = 0.06f;
+    float increaseLength = 250f;
+    float decreaseLength = 100f;
     float moveSpeed = 1.8f;
     Vector3 narratorInsideSpot = new Vector3(-0.4f, 0, 0.9f);
-    Vector3 narratorOutsideSpot = new Vector3(-1.3f, 0, 0.9f);
+    Vector3 narratorOutsideSpot = new Vector3(-1.9f, 0, 0.9f);
 
 
     //Publicly Set
@@ -70,6 +74,7 @@ public class VideoDecider : MonoBehaviour
     public VideoClip complacentNarrator;
     public VideoClip insanityNarrator;
 
+    public AudioSource audio;
     public GameObject starsHolder;
     public Image star1;
     public Image star2;
@@ -81,16 +86,21 @@ public class VideoDecider : MonoBehaviour
 
     // Internally Used
     UnityEvent delegateMethod;
-    int totalStars;
+    public int totalStars;
     ArrayList endingsSeen;
-    int eatsClicked;
-    int drinksClicked;
-    int sleepsClicked;
-    int exercisesClicked;
-    int artsClicked;
-    int mirrorsClicked;
+    public int eatsClicked;
+    public int drinksClicked;
+    public int sleepsClicked;
+    public int exercisesClicked;
+    public int artsClicked;
+    public int mirrorsClicked;
     bool narratorSlidingIn = false;
     bool narratorSlidingOut = false;
+
+    bool increaseVolume = true;
+    public float increaseElapsed = 0.0f;
+    float decreaseElapsed = 0.0f;
+    bool decreaseVolume = false;
 
     // Start is called before the first frame update
     void Start()
@@ -114,8 +124,29 @@ public class VideoDecider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (increaseVolume)
+        {
+            audio.volume = Mathf.Lerp(audio.volume, normalMusicVolume, increaseElapsed / increaseLength);
+            increaseElapsed += 0.1f;
+            if (Mathf.Abs(audio.volume - normalMusicVolume) <= 0.01f)
+            {
+                increaseElapsed = 0.0f;
+                increaseVolume = false;
+            }
+        }
+        if (decreaseVolume)
+        {
+            audio.volume = Mathf.Lerp(audio.volume, reducedMusicVolume, decreaseElapsed / decreaseLength);
+            decreaseElapsed += Time.deltaTime;
+            if (Mathf.Abs(audio.volume - reducedMusicVolume) <= 0.01f)
+            {
+                decreaseElapsed = 0.0f;
+                decreaseVolume = false;
+            }
+        }
         if (narratorSlidingIn)
         {
+            audio.volume = Mathf.Lerp(audio.volume, reducedMusicVolume, Time.time);
             narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorInsideSpot, moveSpeed * Time.deltaTime);
             if (Mathf.Abs(narratorBox.transform.position.x - narratorInsideSpot.x) <= 0.02f)
             {
@@ -128,6 +159,7 @@ public class VideoDecider : MonoBehaviour
 
         if (narratorSlidingOut)
         {
+            audio.volume = Mathf.Lerp(audio.volume, normalMusicVolume, Time.time);
             narratorBox.transform.position = Vector3.MoveTowards(narratorBox.transform.position, narratorOutsideSpot, moveSpeed * 1.1f * Time.deltaTime);
             if (narratorBox.transform.position.x - narratorOutsideSpot.x <= 0.02f)
             {
@@ -187,9 +219,18 @@ public class VideoDecider : MonoBehaviour
     void EnableButtons()
     {
         starsHolder.SetActive(true);
-        eatButton.SetActive(true);
-        drinkButton.SetActive(true);
-        sleepButton.SetActive(true);
+        if (!endingsSeen.Contains("overeat"))
+        {
+            eatButton.SetActive(true);
+        }
+        if (!endingsSeen.Contains("overdrink"))
+        {
+            drinkButton.SetActive(true);
+        }
+        if (!endingsSeen.Contains("oversleep"))
+        {
+            sleepButton.SetActive(true);
+        }
         if ((eatsClicked + drinksClicked + sleepsClicked >= 2) || totalStars >= 2)
         {
             exerciseButton.SetActive(true);
@@ -474,6 +515,7 @@ public class VideoDecider : MonoBehaviour
     public void TrueEndingClick()
     {
         delegateMethod.RemoveAllListeners();
+        trueEndingButton.SetActive(false);
         PlayVideo(trueEnding);
     }
 
@@ -514,6 +556,7 @@ public class VideoDecider : MonoBehaviour
     void PlayNarrator(VideoClip clipToPlay)
     {
         Debug.Log("play narrator");
+        decreaseVolume = true;
         narratorSlidingIn = true;
         narratorVp.clip = clipToPlay;
     }
@@ -521,5 +564,7 @@ public class VideoDecider : MonoBehaviour
     void NarratorReset(UnityEngine.Video.VideoPlayer vp)
     {
         narratorSlidingOut = true;
+        increaseVolume = true;
+        delegateMethod.RemoveAllListeners();
     }
 }
